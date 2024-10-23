@@ -3,13 +3,13 @@ require('dotenv').config()
 
 const ApiControlsDB = () => {
     var ApiControlDB = mysql.createConnection({
-        host: process.env.HOST || '46.4.68.90',
-        user: process.env.USER || 'harrixte_ch',
-        password: process.env.PASSWORD || 'Harrixtech@',
+        host: process.env.HOST,
+        user: process.env.USER,
+        password: process.env.PASSWORD,
         port: process.env.PORT || 3306,
         waitForConnections:true,
         multipleStatements: true,
-        database: process.env.DATABASE || 'harrixte_API_Controls'
+        database: process.env.DATABASE'
     })
     return ApiControlDB
 }
